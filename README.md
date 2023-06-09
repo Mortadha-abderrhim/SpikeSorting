@@ -1,6 +1,6 @@
 # Automated Hardware-efficient spike sorting algorithm for implantable BMIs
 
-In this project, we implement a high-performance hardware-efficient online lagorith for neural spike sorting. Towards this end, we first develop a feature selection methodology to enhance discrimination between different spike classes. The spikes are then clusterd in the low-dimensional feature space based on an auto-updated l2 template-matching algorithm.
+In this project, we implement a high-performance hardware-efficient online algorithm for neural spike sorting. Towards this end, we first develop a feature selection methodology to enhance discrimination between different spike classes. The spikes are then clusterd in the low-dimensional feature space based on an auto-updated l2 template-matching algorithm.
 
 
 ## Methodology
@@ -19,7 +19,7 @@ more suitable for real-time spike sorting applications than other more computati
 ### Automated L-2 norm Template Matching
 
 <p>The proposed algorithm could be summarized by the following flowchart:
-![image](/FlowChart/AlgorithmFlowChart.png)
+![algorithm flow chart](/FlowChart/AlgorithmFlowChart.png)
 
 <ul>
   <li>**Distance Metric :** In order to compute distances between the input and the cluster centroids in the feature space, we employ the square of the l2 norm </li>
@@ -42,7 +42,7 @@ For the evaluation metric, we employ classification accuracy, that is the percen
 ### On the Dataset
 
 The evaluation is done for the four datasets of Waveclus benchmark (Easy1, Easy2, Difficult1, Difficult2), at different noise levels, sampling rates and data resolutions. The results are shown in the figure below:
-![image](/FlowChart/Accuracy.png)
+![results](/FlowChart/Accuracy.png)
 On average, our algorithm achieves an accuracy of 96.1% for the WaveClus datasets at different noise levels which is superior to the known state-of-the-art methods. Furthermore, it achieves an accuracy higher than 95% for a resolution larger than 6 at 0.1 noise level. The high classification accuracy is alson ensured at a sampling rate larger than 18kS/s.
 
 ### On the output of the Spike Detector
