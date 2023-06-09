@@ -12,14 +12,14 @@ In this section, we present a short summary of the proposed methodology.
 <p>In order to enhance the discrimination between different spike classes, we perform a feature extraction step where the detected spikes are mapped into a feature space. Different approaches for feature extraction have been proposed throughout the literature to achieve high discrimination between the spike classes while reducing the computational complexity.  
 In this project, we select the maximum and minimum of the first and second derivative of the signal, also known as First and Second Derivative Extrema (FSDE). We also add the timing of the first positive peak of the signal. All the features are computed over a time window of 25 samples. </p>
 <p>The proposed approach yields a five dimensional feature space. The figure below represents the selected features for a typical action potential waveform with its first and second derivatives:
-![image](Results/featureSelection.png) </p>
+![image](/Results/featureSelection.png) </p>
 <p>This approach offers several advantages over alternative methods. It enables detailed analysis of spike shapes, capturing important characteristics such as peak timings and rate of change. Thus, the proposed features provide discriminatory power, enabling the effective separation of neurons of different types. Besides, the technique exhibits robustness to noise, as it focuses on detecting specific points of interest that are less prone to noise interference. Finally, the computational efficiency of this feature extraction methodology makes it
 more suitable for real-time spike sorting applications than other more computationally intensive approaches, such as PCA.</p>
 
 ### Automated L-2 norm Template Matching
 
 <p>The proposed algorithm could be summarized by the following flowchart:
-![image](FlowChart/AlgorithmFlowChart.png)
+![image](/FlowChart/AlgorithmFlowChart.png)
 
 <ul>
   <li>**Distance Metric :** In order to compute distances between the input and the cluster centroids in the feature space, we employ the square of the l2 norm </li>
@@ -42,7 +42,7 @@ For the evaluation metric, we employ classification accuracy, that is the percen
 ### On the Dataset
 
 The evaluation is done for the four datasets of Waveclus benchmark (Easy1, Easy2, Difficult1, Difficult2), at different noise levels, sampling rates and data resolutions. The results are shown in the figure below:
-![image](FlowChart/Accuracy.png)
+![image](/FlowChart/Accuracy.png)
 On average, our algorithm achieves an accuracy of 96.1% for the WaveClus datasets at different noise levels which is superior to the known state-of-the-art methods. Furthermore, it achieves an accuracy higher than 95% for a resolution larger than 6 at 0.1 noise level. The high classification accuracy is alson ensured at a sampling rate larger than 18kS/s.
 
 ### On the output of the Spike Detector
